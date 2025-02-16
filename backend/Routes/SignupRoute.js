@@ -1,8 +1,17 @@
 const express = require("express");
 const router = express.Router();
-const User = require("../Models/users");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
+const User = require("../Models/users");
+
+router.get("/users", async (req, res) => {
+    try {
+      const user = await User.find();
+      res.status(200).json(user);
+    } catch (error) {
+      res.status(500).json({ success: false, message: "Error fetching products" });
+    }
+  });
 
 router.post("/signup", async (req, res) => {
     try {
@@ -46,5 +55,14 @@ router.post("/signup", async (req, res) => {
       res.status(500).json({ message: "Server error" });
     }
   });
+
+   router.delete("/delete-user/:id", async (req, res) => {
+      try {
+        await User.findByIdAndDelete(req.params.id);
+        res.status(200).json({ success: true, message: "user deleted successfully" });
+      } catch (error) {
+        res.status(500).json({ success: false, message: "Error deleting product" });
+      }
+    });
 
   module.exports = router;

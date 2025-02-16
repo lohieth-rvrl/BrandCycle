@@ -8,9 +8,9 @@ import Signup from './Components/Auth/Signup';
 export default function App() {
   return (
     <div>
+      <Admindash/>
       <Login/>
       <Signup/>
-      <Admindash/>
       <AllProducts/>
     </div>
   )
