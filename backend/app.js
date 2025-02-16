@@ -14,8 +14,10 @@ app.use(express.json());
 app.use(cors());
 
 const productRoutes = require("./Routes/product");
+const SignupRoute = require("./Routes/SignupRoute");
 app.use("/uploads", express.static("uploads"));
 app.use("/api/v1", productRoutes);
+app.use("/api/v1", SignupRoute);
 
 app.listen(process.env.PORT, () => {
   console.log(`Server listening on Port ${process.env.PORT} in ${process.env.NODE_ENV}`);

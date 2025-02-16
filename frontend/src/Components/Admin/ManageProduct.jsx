@@ -207,59 +207,6 @@ function ManageProduct() {
                     </form>
                   )}
                 </div>
-
-
-
-
-
-                {/* <div className="mb-3">
-                  <label>Select Category:</label>
-                  <select className="form-control" onChange={handleCategoryChange} value={category}>
-                    <option value="">Select</option>
-                    <option value="Electronics">Electronics</option>
-                    <option value="Fashion">Fashion</option>
-                    <option value="Books">Books</option>
-                  </select>
-                </div>
-                <div className="mb-3">
-                  {category && products.length > 0 && (
-                    <ul className="list-group">
-                      {products.map((product) => (
-                        <li key={product._id} className="list-group-item d-flex justify-content-between align-items-center">
-                          {product.name}
-                          <button className="btn btn-success btn-sm" onClick={() => setUpdateProductId(product.name)}>
-                            Edit
-                          </button>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                  {category && products.length === 0 && <p className="text-center mt-3">No products found in this category.</p>}
-                </div>
-
-                <div className="mb-3">
-                  {updateProductId && (
-                    <form onSubmit={handleUpdate} className="p-3">
-                      <input type="text" name="name" placeholder="{p.name}" className="form-control mb-3" value={product.name} onChange={handleChange} />
-                      <input type="text" name="description" placeholder="Description" className="form-control mb-3" value={product.description} onChange={handleChange} />
-                      <input type="number" name="price" placeholder="Price" className="form-control mb-3" value={product.price} onChange={handleChange} />
-                      <input type="number" name="stock" placeholder="Stock" className="form-control mb-3" value={product.stock} onChange={handleChange} />
-                      <input type="text" name="category" placeholder="Category" className="form-control mb-3" value={product.category} onChange={handleChange} />
-                      <input type="file" className="form-control mb-3" onChange={handleImageChange} />
-                      <button type="submit" className="btn btn-warning w-100">Update Product</button>
-                    </form>
-                  )}
-                </div>
-
-                <form onSubmit={handleUpdate} className="p-3">
-                  <input type="text" name="name" placeholder="{p.name}" className="form-control mb-3" value={product.name} onChange={handleChange} />
-                  <input type="text" name="description" placeholder="Description" className="form-control mb-3" value={product.description} onChange={handleChange} />
-                  <input type="number" name="price" placeholder="Price" className="form-control mb-3" value={product.price} onChange={handleChange} />
-                  <input type="number" name="stock" placeholder="Stock" className="form-control mb-3" value={product.stock} onChange={handleChange} />
-                  <input type="text" name="category" placeholder="Category" className="form-control mb-3" value={product.category} onChange={handleChange} />
-                  <input type="file" className="form-control mb-3" onChange={handleImageChange} />
-                  <button type="submit" className="btn btn-warning w-100">Update Product</button>
-                </form> */}
               </div>
 
               {/* DELETE PRODUCT FORM */}
