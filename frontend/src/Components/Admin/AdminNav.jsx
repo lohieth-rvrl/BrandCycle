@@ -1,10 +1,10 @@
-
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Admindash() {
   return (
     <div className="container">
-      <nav className="navbar navbar-expand-sm bg-light">
+      <nav className="navbar navbar-expand-sm ">
         <div className="container-fluid">
           <button
             className="navbar-toggler"
@@ -14,25 +14,40 @@ function Admindash() {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse justify-content-center" id="mynavbar">
-            <ul className="navbar-nav gap-5">
-              <li className="nav-item">
-                <a className="nav-link" href="/">Dashboard</a>
+          <div
+            className="collapse navbar-collapse justify-content-center"
+            id="mynavbar"
+          >
+            <ul className="navbar-nav bg-light border border-1 rounded">
+              <li className="nav-item px-3">
+                <Link className="nav-link" to="/">
+                  Dashboard
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/products">Products</a>
+                <Link className="nav-link" to="/products">
+                  Products
+                </Link>
+              </li>
+              <li className="nav-item" >
+                <Link className="nav-link disabled" to="/orders" tabIndex="-1" aria-disabled="true">
+                  Orders
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/orders">Orders</a>
+                <Link className="nav-link" to="/users">
+                  Users
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/users">Users</a>
+                <Link className="nav-link disabled" to="/reports" tabIndex="-1" aria-disabled="true">
+                  Reports
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/reports">Reports</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="/settings">Settings</a>
+                <Link className="nav-link" to="/settings">
+                  Settings
+                </Link>
               </li>
             </ul>
           </div>

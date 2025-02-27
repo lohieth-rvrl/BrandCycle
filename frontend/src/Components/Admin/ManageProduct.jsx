@@ -174,18 +174,53 @@ function ManageProduct() {
                 </div>
 
                 <div className="mb-3">
-                  {category && products.length > 0 && (
-                    <ul className="list-group">
-                      {products.map((product) => (
-                        <li key={product._id} className="list-group-item d-flex justify-content-between align-items-center">
-                          {product.name}
-                          <button className="btn btn-success btn-sm" onClick={() => handleProductSelect(product)}>
-                            Edit
-                          </button>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
+                  <div className="container">
+                    <div className="row">
+                      <div className="col-md-12 ">
+                        {/* {category && products.length > 0 && (
+                          <ul className="list-group d-flex justify-content-center flex-column">
+                            {products.map((product) => (
+                              <li key={product._id} className="list-group-item d-flex justify-content-between align-items-center">
+                                <div className="col-md-6 mb-4" key={product.name}>
+                                  <div className="card h-25 shadow-sm">
+                                    <img src={`data:image/png;base64,${product.image}`} alt={product.name} className="card-img-top" style={{ height: "100px", objectFit: "cover" }} />
+                                    <div className="card-body">
+                                      <h5 className="card-title">{product.name}</h5>
+                                      <p className="card-text">{product.description}</p>
+                                      <p className="card-text">
+                                        <strong>Price:</strong> ${product.price}
+                                      </p>
+                                      <p className="card-text">
+                                        <strong>Stock:</strong> {product.stock}
+                                      </p>
+                                    </div>
+                                    <div className="card-footer text-center">
+                                      <button className="btn btn-primary w-100" >Add to Cart 🛒</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                            ))}
+                          </ul>)} */}
+
+                        {category && products.length > 0 && (
+                          <ul className="list-group d-flex justify-content-center flex-column">
+                            {products.map((product) => (
+                              <li key={product._id} className="list-group-item d-flex justify-content-between align-items-center">
+                                {/* <img src={`data:image/png;base64,${product.image}`} alt={product.name} className="card-img-top" style={{ height: "200px", objectFit: "cover" }} /> */}
+                                {product.name} 
+                                <button className="btn btn-success btn-sm" onClick={() => handleProductSelect(product)}>
+                                  Edit
+                                </button>
+                              </li>
+                            ))}
+                          </ul>
+                        )
+                        }
+                      </div>
+                    </div>
+                  </div>
+
                   {category && products.length === 0 && <p className="text-center mt-3">No products found in this category.</p>}
                 </div>
 

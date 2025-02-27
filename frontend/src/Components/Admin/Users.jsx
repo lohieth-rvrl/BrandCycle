@@ -21,7 +21,7 @@ function Users() {
             try {
                 await axios.delete(`http://localhost:5000/api/v1/delete-user/${id}`);
                 alert("user deleted successfully");
-                fetchProducts();
+                fetchUsers();
             } catch (error) {
                 alert("Failed to delete user");
             }
