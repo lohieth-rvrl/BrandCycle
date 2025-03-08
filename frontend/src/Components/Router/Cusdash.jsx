@@ -8,13 +8,14 @@ import Signup from '../Auth/Signup';
 import Footer from '../Customer/Footer';
 import ProductDetail from '../Customer/ProductDetail';
 import Cart from '../Customer/Cart';
+import HomePage from '../Customer/HomePage';
 
 function Cusdash() {
     return (
         <>
             <Navbar />
             <Routes>
-                <Route path="/" element={
+                {/* <Route path="/" element={
                     <>
                         <div className="container">
                             <div className="row vh-100">
@@ -28,8 +29,9 @@ function Cusdash() {
                             </div>
                         </div>
                     </>
-                } />
+                } /> */}
                 <Route path="/shop" element={<AllProducts />} />
+                <Route path="/" element={<HomePage/>} />
                 <Route path="/about" element={<About />} />
                 <Route path="/cart" element={<Cart/>} />
                 <Route path="/login" element={<Login/>} />
