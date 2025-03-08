@@ -1,17 +1,19 @@
-import React from 'react'
-import Admindash from './Components/Admin/Admindash';
-import AllProducts from './Components/Customer/AllProducts';
-import Login from './Components/Auth/Login';
-import Signup from './Components/Auth/Signup';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Admindash from './Components/Router/Admindash';
+import Cusdash from './Components/Router/Cusdash';
+import './css/App.css';
 
 
 export default function App() {
+  const isAdmin = false; // Example condition for admin vs. user view
+
   return (
-    <div>
-      <Login/>
-      <Signup/>
-      <Admindash/>
-      <AllProducts/>
-    </div>
-  )
+    <Router>
+      <Routes>
+        <Route path="/*" element={isAdmin ? <Admindash /> : <Cusdash />} />
+      </Routes>
+    </Router>
+  );
+
 }
