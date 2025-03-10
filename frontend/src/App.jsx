@@ -1,19 +1,14 @@
+// App.jsx
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Admindash from './Components/Router/Admindash';
-import Cusdash from './Components/Router/Cusdash';
-import './css/App.css';
+import HomePage from './components/Customer/HomePage';
+import './css/App.css'; // Updated path for App.css
 
-
-export default function App() {
-  const isAdmin = false; // Example condition for admin vs. user view
-
+function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/*" element={isAdmin ? <Admindash /> : <Cusdash />} />
-      </Routes>
-    </Router>
+    <div className="App">
+      <HomePage />
+    </div>
   );
-
 }
+
+export default App;

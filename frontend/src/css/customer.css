@@ -1,4 +1,4 @@
-#nav1{
+/* #nav1{
     background-color: #eae5d8;
     color: #505655 !important;
 }
@@ -6,6 +6,133 @@
     background-color: #eae5d8;
     color: #5b5235;
     padding: 100px 0px;
-}
+} */
 
 /* lato,  sans-serif, amiri,  serif, arial */
+
+/* customer.css */
+/* Product Card Styles */
+
+/* customer.css */
+/* Product Card Styles */
+/* .product-card {
+    transition: all 0.3s ease;
+}
+
+.product-card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+} */
+
+/* Navbar Styles */
+.navbar-custom {
+    padding: 1rem 2rem;
+}
+
+.navbar-brand-custom {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.nav-link-custom {
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link-custom:hover {
+    color: #3b82f6 !important;
+}
+
+/* Carousel Section Styles */
+.carousel-section {
+    margin-top: 56px; /* Adjust for fixed navbar */
+}
+
+.carousel-image {
+    width: 100%;
+    height: 600px; /* Adjust height as needed */
+    object-fit: cover;
+}
+
+
+/* Product Card Styles */
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.products-section {
+    padding: 50px 0;
+}
+
+
+/* Category Card Styles */
+.category-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Testimonial Card Styles */
+.testimonial-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer Styles */
+.footer-section {
+    background-color: #2d3748;
+    color: white;
+    padding: 50px 0;
+}
+
+.footer-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.footer-description {
+    font-size: 1rem;
+    color: #a0aec0;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #a0aec0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+.social-links a {
+    color: #a0aec0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #fff;
+}
+
+about-section {
+    padding: 50px 0;
+}
