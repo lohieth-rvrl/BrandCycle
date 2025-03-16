@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
 
 const Signup = () => {
   const [formData, setFormData] = useState({
@@ -40,52 +40,82 @@ const Signup = () => {
 
   return (
     <div className="d-flex justify-content-center align-items-center vh-100 bg-light">
-      <div className="card shadow p-4" style={{ width: "350px", borderRadius: "10px" }}>
+      <div className="card shadow p-4" style={{ width: "100%", maxWidth: "400px", borderRadius: "10px" }}>
         <h2 className="text-center fw-bold mb-4">Sign Up</h2>
         {success && <div className="alert alert-success">{success}</div>}
         {errors.server && <div className="alert alert-danger">{errors.server}</div>}
 
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
-            <label className="form-label">Username</label>
-            <input type="text" className="form-control" placeholder="Enter Username"
-              value={formData.username} onChange={(e) => setFormData({ ...formData, username: e.target.value })} />
+            <label className="form-label fw-bold">Username</label>
+            <input
+              type="text"
+              className={`form-control ${errors.username ? "is-invalid" : ""}`}
+              placeholder="Enter Username"
+              value={formData.username}
+              onChange={(e) => setFormData({ ...formData, username: e.target.value })}
+            />
             {errors.username && <small className="text-danger">{errors.username}</small>}
           </div>
 
           <div className="mb-3">
-            <label className="form-label">Phone</label>
-            <input type="text" className="form-control" placeholder="Enter Phone Number"
-              value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })} />
+            <label className="form-label fw-bold">Phone</label>
+            <input
+              type="text"
+              className={`form-control ${errors.phone ? "is-invalid" : ""}`}
+              placeholder="Enter Phone Number"
+              value={formData.phone}
+              onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+            />
             {errors.phone && <small className="text-danger">{errors.phone}</small>}
           </div>
 
           <div className="mb-3">
-            <label className="form-label">Email</label>
-            <input type="email" className="form-control" placeholder="Enter Email"
-              value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} />
+            <label className="form-label fw-bold">Email</label>
+            <input
+              type="email"
+              className={`form-control ${errors.email ? "is-invalid" : ""}`}
+              placeholder="Enter Email"
+              value={formData.email}
+              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+            />
             {errors.email && <small className="text-danger">{errors.email}</small>}
           </div>
 
           <div className="mb-3">
-            <label className="form-label">Password</label>
-            <input type="password" className="form-control" placeholder="Enter Password"
-              value={formData.password} onChange={(e) => setFormData({ ...formData, password: e.target.value })} />
+            <label className="form-label fw-bold">Password</label>
+            <input
+              type="password"
+              className={`form-control ${errors.password ? "is-invalid" : ""}`}
+              placeholder="Enter Password"
+              value={formData.password}
+              onChange={(e) => setFormData({ ...formData, password: e.target.value })}
+            />
             {errors.password && <small className="text-danger">{errors.password}</small>}
           </div>
 
           <div className="mb-3">
-            <label className="form-label">Confirm Password</label>
-            <input type="password" className="form-control" placeholder="Confirm Password"
-              value={formData.confirmPassword} onChange={(e) => setFormData({ ...formData, confirmPassword: e.target.value })} />
+            <label className="form-label fw-bold">Confirm Password</label>
+            <input
+              type="password"
+              className={`form-control ${errors.confirmPassword ? "is-invalid" : ""}`}
+              placeholder="Confirm Password"
+              value={formData.confirmPassword}
+              onChange={(e) => setFormData({ ...formData, confirmPassword: e.target.value })}
+            />
             {errors.confirmPassword && <small className="text-danger">{errors.confirmPassword}</small>}
           </div>
 
-          <button type="submit" className="btn btn-dark w-100">Create Account</button>
+          <button type="submit" className="btn btn-primary w-100 fw-bold">
+            Create Account
+          </button>
         </form>
 
         <p className="text-center mt-3">
-          Already have an account? <a href="/login" className="fw-bold text-dark">Login</a>
+          Already have an account?{" "}
+          <a href="/login" className="text-decoration-none fw-bold">
+            Login
+          </a>
         </p>
       </div>
     </div>

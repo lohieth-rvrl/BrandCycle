@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-// import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  // const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -25,7 +24,7 @@ const Login = () => {
 
       if (response.data.token) {
         localStorage.setItem("token", response.data.token);
-        alert("welcome");
+        alert("Welcome!");
         // navigate("/dashboard"); // Redirect to dashboard after login
       } else {
         setError("Invalid email or password");
@@ -36,15 +35,15 @@ const Login = () => {
   };
 
   return (
-    <div className="d-flex justify-content-center align-items-center vh-100">
-      <div className="card shadow p-4" style={{ width: "350px" }}>
-        <h3 className="text-center fw-bold">Login</h3>
+    <div className="d-flex justify-content-center align-items-center vh-100 bg-light">
+      <div className="card shadow p-4" style={{ width: "100%", maxWidth: "400px" }}>
+        <h3 className="text-center fw-bold mb-4">Login</h3>
 
         {error && <div className="alert alert-danger">{error}</div>}
 
         <form onSubmit={handleLogin}>
           <div className="mb-3">
-            <label className="form-label">Email</label>
+            <label className="form-label fw-bold">Email</label>
             <input
               type="email"
               className="form-control"
@@ -55,7 +54,7 @@ const Login = () => {
           </div>
 
           <div className="mb-3">
-            <label className="form-label">Password</label>
+            <label className="form-label fw-bold">Password</label>
             <input
               type="password"
               className="form-control"
@@ -65,10 +64,15 @@ const Login = () => {
             />
           </div>
 
-          <button type="submit" className="btn btn-dark w-100">Login</button>
+          <button type="submit" className="btn btn-primary w-100 fw-bold">
+            Login
+          </button>
 
           <p className="mt-3 text-center">
-            Don't have an account? <a href="/signup" className="text-dark fw-bold">Sign Up</a>
+            Don't have an account?{" "}
+            <a href="/signup" className="text-decoration-none fw-bold">
+              Sign Up
+            </a>
           </p>
         </form>
       </div>

@@ -1,0 +1,162 @@
+[
+  {
+    "name": "Classic Cotton T-Shirt",
+    "description": "Soft and comfortable 100% cotton t-shirt.",
+    "price": 12.99,
+    "stock": 50,
+    "category": "T-Shirts",
+    "image": "data:image/png;base64,T1R...==" 
+  },
+  {
+    "name": "Graphic Print T-Shirt",
+    "description": "Trendy graphic printed t-shirt for casual wear.",
+    "price": 14.99,
+    "stock": 40,
+    "category": "T-Shirts",
+    "image": "data:image/png;base64,T1R...==" 
+  },
+  {
+    "name": "V-Neck Slim Fit T-Shirt",
+    "description": "Slim fit v-neck t-shirt with soft fabric.",
+    "price": 15.99,
+    "stock": 35,
+    "category": "T-Shirts",
+    "image": "data:image/png;base64,T1R...==" 
+  },
+  {
+    "name": "Long Sleeve T-Shirt",
+    "description": "Casual long sleeve t-shirt for all seasons.",
+    "price": 18.99,
+    "stock": 30,
+    "category": "T-Shirts",
+    "image": "data:image/png;base64,T1R...==" 
+  },
+  {
+    "name": "Oversized T-Shirt",
+    "description": "Trendy oversized t-shirt with a relaxed fit.",
+    "price": 16.99,
+    "stock": 25,
+    "category": "T-Shirts",
+    "image": "data:image/png;base64,T1R...==" 
+  },
+  {
+    "name": "Cotton Polo T-Shirt",
+    "description": "Premium cotton polo t-shirt for a classic look.",
+    "price": 22.99,
+    "stock": 20,
+    "category": "T-Shirts",
+    "image": "data:image/png;base64,T1R...==" 
+  },
+  {
+    "name": "Sports Dry Fit T-Shirt",
+    "description": "Breathable and lightweight dry-fit sports t-shirt.",
+    "price": 19.99,
+    "stock": 30,
+    "category": "T-Shirts",
+    "image": "data:image/png;base64,T1R...==" 
+  },
+  {
+    "name": "Striped Casual T-Shirt",
+    "description": "Stylish striped t-shirt for daily wear.",
+    "price": 14.49,
+    "stock": 28,
+    "category": "T-Shirts",
+    "image": "data:image/png;base64,T1R...==" 
+  },
+  {
+    "name": "Henley Neck T-Shirt",
+    "description": "Henley-style buttoned t-shirt for a casual look.",
+    "price": 17.99,
+    "stock": 22,
+    "category": "T-Shirts",
+    "image": "data:image/png;base64,T1R...==" 
+  },
+  {
+    "name": "Printed Anime T-Shirt",
+    "description": "Anime-themed t-shirt for fans.",
+    "price": 16.49,
+    "stock": 15,
+    "category": "T-Shirts",
+    "image": "data:image/png;base64,T1R...==" 
+  },
+  {
+    "name": "The Great Gatsby",
+    "description": "Classic novel by F. Scott Fitzgerald.",
+    "price": 10.99,
+    "stock": 40,
+    "category": "Books",
+    "image": "data:image/png;base64,T1R...==" 
+  },
+  {
+    "name": "1984 - George Orwell",
+    "description": "Dystopian novel about a totalitarian regime.",
+    "price": 9.99,
+    "stock": 35,
+    "category": "Books",
+    "image": "data:image/png;base64,T1R...==" 
+  },
+  {
+    "name": "To Kill a Mockingbird",
+    "description": "A novel about racial injustice by Harper Lee.",
+    "price": 11.99,
+    "stock": 30,
+    "category": "Books",
+    "image": "data:image/png;base64,T1R...==" 
+  },
+  {
+    "name": "Harry Potter and the Sorcerer's Stone",
+    "description": "The first book in the Harry Potter series.",
+    "price": 15.99,
+    "stock": 50,
+    "category": "Books",
+    "image": "data:image/png;base64,T1R...==" 
+  },
+  {
+    "name": "The Hobbit",
+    "description": "Fantasy novel by J.R.R. Tolkien.",
+    "price": 13.99,
+    "stock": 25,
+    "category": "Books",
+    "image": "data:image/png;base64,T1R...==" 
+  },
+  {
+    "name": "Rich Dad Poor Dad",
+    "description": "Personal finance book by Robert Kiyosaki.",
+    "price": 14.49,
+    "stock": 20,
+    "category": "Books",
+    "image": "data:image/png;base64,T1R...==" 
+  },
+  {
+    "name": "Sapiens: A Brief History of Humankind",
+    "description": "Historical analysis by Yuval Noah Harari.",
+    "price": 17.99,
+    "stock": 22,
+    "category": "Books",
+    "image": "data:image/png;base64,T1R...==" 
+  },
+  {
+    "name": "Atomic Habits",
+    "description": "Self-improvement book by James Clear.",
+    "price": 16.99,
+    "stock": 28,
+    "category": "Books",
+    "image": "data:image/png;base64,T1R...==" 
+  },
+  {
+    "name": "The Alchemist",
+    "description": "Philosophical novel by Paulo Coelho.",
+    "price": 12.99,
+    "stock": 30,
+    "category": "Books",
+    "image": "data:image/png;base64,T1R...==" 
+  },
+  {
+    "name": "The Psychology of Money",
+    "description": "Personal finance book by Morgan Housel.",
+    "price": 14.99,
+    "stock": 18,
+    "category": "Books",
+    "image": "data:image/png;base64,T1R...==" 
+  }
+]

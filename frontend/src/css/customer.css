@@ -9,3 +9,429 @@
 }
 
 /* lato,  sans-serif, amiri,  serif, arial */
+
+/* ✅ Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Amiri&display=swap');
+
+/* ✅ Root Variables for Colors & Fonts */
+:root {
+    --navy-blue: #05445e;
+    --blue-grotto: #189ab4;
+    --blue-green: #75e6da;
+    --baby-blue: #d4f1f4;
+
+    --font-primary: 'Lato', sans-serif;
+    --font-secondary: 'Amiri', serif;
+    --font-default: Arial, sans-serif;
+}
+
+/* ✅ Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-primary);
+}
+
+/* ✅ Body Styling */
+body {
+    background-color: var(--baby-blue);
+    color: var(--navy-blue);
+}
+
+/* ✅ Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-secondary);
+    color: var(--navy-blue);
+}
+
+/* ✅ Links */
+a {
+    text-decoration: none;
+    color: var(--blue-grotto);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--blue-green);
+}
+
+/* ✅ Buttons */
+button {
+    background: var(--blue-grotto);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: var(--blue-green);
+}
+
+/* ✅ Cards */
+.card {
+    background: white;
+    border: 1px solid var(--blue-green);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+}
+
+/* ✅ Pagination */
+.pagination .page-link {
+    background: var(--blue-grotto);
+    color: white;
+    border: none;
+}
+
+.pagination .page-item.active .page-link {
+    background: var(--navy-blue);
+}
+
+.pagination .page-link:hover {
+    background: var(--blue-green);
+}
+
+/* ✅ Forms */
+input, select, textarea {
+    border: 2px solid var(--blue-grotto);
+    padding: 8px;
+    border-radius: 5px;
+    outline: none;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: var(--navy-blue);
+}
+
+/* ✅ Category Filter */
+.filter-section {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.filter-section h6 {
+    font-weight: bold;
+    color: var(--navy-blue);
+}
+
+/* ✅ Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animated-fade {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* ✅ Premium Card Styling */
+.product-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    border: 2px solid var(--blue-grotto);
+}
+
+/* ✅ Image Styling */
+.product-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* ✅ Hover Effects */
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    border-color: var(--navy-blue);
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+/* ✅ Card Body */
+.product-card .card-body {
+    padding: 15px;
+    text-align: center;
+}
+
+/* ✅ Product Name */
+.product-card .product-title {
+    font-family: var(--font-secondary);
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--navy-blue);
+}
+
+/* ✅ Category Label */
+.product-card .product-category {
+    font-size: 14px;
+    color: var(--blue-grotto);
+    font-weight: 500;
+}
+
+/* ✅ Price Styling */
+.product-card .product-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--blue-green);
+}
+
+/* ✅ Rating Stars */
+.product-card .rating-stars {
+    color: #FFD700; /* Gold */
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+/* ✅ Add to Cart Button */
+.product-card .add-to-cart {
+    background: var(--blue-grotto);
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 0 0 12px 12px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+.product-card .add-to-cart:hover {
+    background: var(--navy-blue);
+    cursor: pointer;
+}
+
+
+    
+
+
+
+/* cart.jsx */
+/* cart.css */
+
+/* General Styles */
+.cart-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cart-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #333;
+  }
+  
+  .cart-container p {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #666;
+  }
+  
+  /* Cart Table Styles */
+  .cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .cart-table th,
+  .cart-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .cart-table th {
+    background-color: #f8f8f8;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .cart-table td {
+    color: #555;
+  }
+  
+  .cart-image {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 5px;
+  }
+  
+  .product-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .product-name {
+    font-weight: bold;
+  }
+  
+  .remove-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #ff4d4d;
+  }
+  
+  .remove-btn:hover {
+    color: #cc0000;
+  }
+  
+  .quantity-control {
+    display: flex;
+    align-items: center;
+  }
+  
+  .quantity-control button {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .quantity-control button:hover {
+    background-color: #ddd;
+  }
+  
+  .quantity-control input {
+    width: 40px;
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 5px;
+    margin: 0 5px;
+    font-size: 1rem;
+  }
+  
+  /* Coupon Code Section */
+  .cart-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .coupon-input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 200px;
+  }
+  
+  .apply-coupon {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: 10px;
+  }
+  
+  .apply-coupon:hover {
+    background-color: #0056b3;
+  }
+  
+  .update-cart {
+    padding: 10px 20px;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .update-cart:hover {
+    background-color: #5a6268;
+  }
+  
+  /* Cart Summary Styles */
+  .cart-summary {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: right;
+  }
+  
+  .cart-summary h3 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .cart-summary p {
+    font-size: 1.1rem;
+    color: #555;
+    margin: 10px 0;
+  }
+  
+  .checkout-btn {
+    padding: 15px 30px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    width: 100%;
+  }
+  
+  .checkout-btn:hover {
+    background-color: #218838;
+  }
+
+
+  /* login.jsx */
+  /* Custom background gradient */
+.bg-light {
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+}
+
+/* Custom card shadow */
+.card {
+  border: none;
+  border-radius: 10px;
+}
+
+/* Custom button hover effect */
+.btn-primary:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}

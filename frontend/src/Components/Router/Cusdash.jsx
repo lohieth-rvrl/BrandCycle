@@ -9,6 +9,7 @@ import Footer from '../Customer/Footer';
 import ProductDetail from '../Customer/ProductDetail';
 import Cart from '../Customer/Cart';
 import HomePage from '../Customer/HomePage';
+import Contact from '../Customer/Contact';
 
 function Cusdash() {
     return (
@@ -36,10 +37,10 @@ function Cusdash() {
                 <Route path="/cart" element={<Cart/>} />
                 <Route path="/login" element={<Login/>} />
                 <Route path="/signup" element={<Signup/>} />
+                <Route path="/contact" element={<Contact/>} />
                 <Route path="/product/:id" element={<ProductDetail />} />
 
             </Routes>
-            <Footer/>
         </>
     )
 }
